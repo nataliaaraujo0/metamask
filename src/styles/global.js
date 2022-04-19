@@ -15,11 +15,11 @@ html{
     }
 }
 :root{
-  --gray-600:#3A3838;
-  --write-50: #FFFDE8;
+  --blue-700:#261C2C;
+  --blue-500: #3E2C41;
 }
 body{
-  background-color: var(--gray-600);
+  background-color: var(--blue-700);
   font-family: 'Roboto',sans-serif;
   -webkit-font-smoothing: antialiased;
 }

@@ -1,5 +1,5 @@
 import { Container } from "./home";
-import { Home } from "./pages";
+import Home from "./pages";
 
 function App() {
   return (

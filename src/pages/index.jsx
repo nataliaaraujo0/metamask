@@ -3,7 +3,7 @@ import { CardAvatar } from "../components/CardAvatar";
 import { CardMetamask } from "../components/CardMetamask";
 import { Container } from "./styled";
 
-export function Home() {
+const Home = () => {
   const [avatar, setRenderAvatar] = useState(false);
   const checkAvatar = () => {
     setRenderAvatar(!avatar);
@@ -15,7 +15,7 @@ export function Home() {
 
   const handleConnectWallet = async () => {
     //verificar se ja ta conectado
-    if (isConnected) return alert("Conta já conectada :" + walletAdress);
+    if (isConnected) return setRenderAvatar(true);
 
     const walletResponse = await connectWallet();
     setIsConnected(walletResponse.connectedStatus);
@@ -34,6 +34,7 @@ export function Home() {
         const object = {
           connectedStatus: true,
           status: "Conectado com sucesso",
+
           address,
         };
 
@@ -58,7 +59,8 @@ export function Home() {
       {!avatar && (
         <CardMetamask onClick={(checkAvatar, () => handleConnectWallet())} />
       )}
-      {avatar && <CardAvatar />}
+      {avatar && <CardAvatar address={walletAdress} />}
     </Container>
   );
-}
+};
+export default Home;

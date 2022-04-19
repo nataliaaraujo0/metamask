@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Container = styled.button`
   width: 525px;
   height: 136px;
-  background-color: var(--write-50);
+  background-color: var(--blue-500);
+  color: aliceblue;
   display: flex;
   align-items: center;
   justify-content: center;
