@@ -16,7 +16,7 @@ html{
 }
 :root{
   --blue-700:#261C2C;
-  --blue-500: #3E2C41;
+  --blue-500:#3E2C41;
 }
 body{
   background-color: var(--blue-700);
